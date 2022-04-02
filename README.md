@@ -84,10 +84,35 @@ An app that can compare prices from different online shopping website.
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+| Property |  Type  | Description |
+|----------|--------|-------------|
+| UserId   | String | unique Id for each user|
+| ObjectId | String | Id for the item which the user has added to the watch list|
+| set_Price| Double | the threshold price for an item, set by the user|
+| current_Price| Double | the current price for an item, updated from the website |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+* Main Screen
+    * No networking request needed
+* Search-result Screen
+    * (Search/Display) Search for the item user typed in and display them out
+    * (Read/GET) Using the Rainforest API to get the item user searched for and parse the data from the .JSON returned
+* Item Page
+    * (Read/GET) Get the item URL first from the Search-result screen
+    * (Read/GET) From the URL, make another request to Rainforest API to get the item detail JSON file and parse it (product name, image, price, rating, or anything we decide later to include)
+* Watch list
+    * (Create)
+        * create a table cell for the product user added to their watch list
+        * can be done locally by using UserDefault
+    * (Delete) 
+        * remove the table cell
+        * ask for help on how to remove items during breakout session
+    * (Read/Get)
+        * grab the URL of the product from UserDefault and use Rainforest API to grab the image and the current price of the product
+* Log-in Page (Optional Feature)
