@@ -98,6 +98,10 @@ An app that can compare prices from different online shopping website.
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
+
+Outline Parse Network Requests: <br>
+Because of the nature of our app, we don't really need any  backend management. All we need is to use the existing API (Rainforest) to search for a product and grab the price, and all other network request listed below.
+
 * Main Screen
     * No networking request needed
 * Search-result Screen
