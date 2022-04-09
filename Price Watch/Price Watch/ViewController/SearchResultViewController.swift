@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  SearchResultViewController.swift
 //  Price Watch
 //
 //  Created by Henry Liu on 4/8/22.
@@ -7,16 +7,17 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class SearchResultViewController: UIViewController {
 
-    // Outlet
-    @IBOutlet weak var searchBar: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func onBackButton(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
 }

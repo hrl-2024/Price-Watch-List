@@ -63,14 +63,22 @@
 				0E2C720F280117FF007FC4C9 /* AppDelegate.swift */,
 				0E2C7211280117FF007FC4C9 /* SceneDelegate.swift */,
 				0E2C7215280117FF007FC4C9 /* Main.storyboard */,
-				0E67E7E028011A3000F25558 /* ItemPageViewController.swift */,
-				0E67E7DE28011A0D00F25558 /* SearchResultViewController.swift */,
-				0E67E7DC2801198300F25558 /* MainViewController.swift */,
+				0EFBB2292801256600B1EE3E /* ViewController */,
 				0E2C721828011801007FC4C9 /* Assets.xcassets */,
 				0E2C721A28011801007FC4C9 /* LaunchScreen.storyboard */,
 				0E2C721D28011801007FC4C9 /* Info.plist */,
 			);
 			path = "Price Watch";
+			sourceTree = "<group>";
+		};
+		0EFBB2292801256600B1EE3E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0E67E7E028011A3000F25558 /* ItemPageViewController.swift */,
+				0E67E7DE28011A0D00F25558 /* SearchResultViewController.swift */,
+				0E67E7DC2801198300F25558 /* MainViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
