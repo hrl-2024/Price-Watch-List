@@ -28,7 +28,7 @@ An app that can compare prices from different online shopping website.
 
 **Required Must-have Stories
 
-[x] Users can type in an item they want.
+- [x] Users can type in an item they want.
 * Users can see the prices for the item from multiple websites.
 * Users can see the customer reviews from multiple websites.
 * Users can add the item to the item watch list
