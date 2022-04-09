@@ -32,8 +32,6 @@ An app that can compare prices from different online shopping website.
 * Users can see the prices for the item from multiple websites.
 * Users can see the customer reviews from multiple websites.
 * Users can add the item to the item watch list
-* Users can log in to store the watch list
-* Users stays sign-in if they had signed in before
 
 **Optional Nice-to-have Stories**
 
@@ -42,6 +40,8 @@ An app that can compare prices from different online shopping website.
 * Users can also see the prices from the foreign shopping websites
 * The app will convert the prices based on the current currencies.
 * User can set a threshold for an item. App can notify the user when the item drops below the threshold.
+* Users can log in to store the watch list
+* Users stays sign-in if they had signed in before
 
 ### 2. Screen Archetypes
 
