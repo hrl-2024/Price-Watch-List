@@ -120,3 +120,9 @@ Because of the nature of our app, we don't really need any  backend management. 
     * (Read/Get)
         * grab the URL of the product from UserDefault and use Rainforest API to grab the image and the current price of the product
 * Log-in Page (Optional Feature)
+
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+<img src='http://i.imgur.com/zHEnudt.gif' title='Stayed logged in' width='500' alt='Stayed logged in' /> <br>
