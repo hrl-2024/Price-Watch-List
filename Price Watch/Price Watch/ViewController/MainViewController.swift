@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    var products = [Product]()
+    
     // Outlet
     @IBOutlet weak var searchBar: UITextField!
     
@@ -20,6 +22,6 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func onSearch(_ sender: Any) {
-        performSegue(withIdentifier: "showSearchResult", sender: nil)
+        //performSegue(withIdentifier: "showSearchResult", sender: nil)
     }
 }
