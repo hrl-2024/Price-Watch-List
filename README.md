@@ -29,6 +29,8 @@ An app that can compare prices from different online shopping website.
 **Required Must-have Stories
 
 - [x] Users can type in an item they want.
+- [x] After typing, use can see the searching result in a tableview
+    * update: API fully working now. But having issues parsing the data (info inside dictionary/array within dictioanries)
 * Users can see the prices for the item from multiple websites.
 * Users can see the customer reviews from multiple websites.
 * Users can add the item to the item watch list
@@ -125,4 +127,6 @@ Because of the nature of our app, we don't really need any  backend management. 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-<img src='http://i.imgur.com/zHEnudt.gif' title='Stayed logged in' width='500' alt='Stayed logged in' /> <br>
+<img src='http://i.imgur.com/zHEnudt.gif' title='can type search' width='500' alt='can type search' /> <br>
+
+<img src='http://i.imgur.com/R6tFuGV.png' title='show results' width='500' alt='shows results' /> <br>
