@@ -7,13 +7,20 @@
 
 import UIKit
 
-class SearchResultViewController: UIViewController {
+class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // for the tableView
+    // data structure for the tableView
     var products = [Product]()
 
+    // Outlets:
+    @IBOutlet weak var productTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        productTableView.dataSource = self
+        productTableView.delegate = self
 
         // Do any additional setup after loading the view.
         getAPIData(withType: "shoes")
@@ -32,14 +39,29 @@ class SearchResultViewController: UIViewController {
             }
             self.products = product
             
-            //TODO: reloading the data after setting up tableview
-            //self.ProductTableView.reloadData() // reloading the data
+            self.productTableView.reloadData() // reloading the data
         }
     }
     
-    
     @IBAction func onBackButton(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+    
+    
+    // For the tableView
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // dequeueing reusable cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell") as! ProductTableViewCell
+        
+        let product = products[indexPath.row]
+        
+        cell.product = product
+        
+        return cell
     }
     
 }

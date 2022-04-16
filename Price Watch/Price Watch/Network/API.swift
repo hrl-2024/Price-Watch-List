@@ -23,7 +23,7 @@ struct API {
           "query": queryString,
           "format": "json",
           "download": false,
-          "num_records": 10
+          "num_records": 3
         ] as [String : Any]
 
         let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
