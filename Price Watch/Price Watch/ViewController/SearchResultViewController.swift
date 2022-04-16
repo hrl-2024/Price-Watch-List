@@ -16,24 +16,24 @@ class SearchResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        getAPIData()
+        getAPIData(withType: "shoes")
+        
+        print(products)
         
     }
     
     // TODO: Get data from API helper and retrieve products
-    func getAPIData() {
+    func getAPIData(withType: String) {
         
-        let APIURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        
-        API.getProduct(with: APIURL) { (product) in
+        API.getProduct(ofType: withType) { (product) in
             guard let product = product else {
                 // make sure movies is not empty
                 return
             }
             self.products = product
             
-            //TODO: change after setting up the tableview
-            //self.MovieTableView.reloadData() // reloading the data
+            //TODO: reloading the data after setting up tableview
+            //self.ProductTableView.reloadData() // reloading the data
         }
     }
     

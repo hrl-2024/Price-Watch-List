@@ -8,8 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
-    var products = [Product]()
     
     // Outlet
     @IBOutlet weak var searchBar: UITextField!
