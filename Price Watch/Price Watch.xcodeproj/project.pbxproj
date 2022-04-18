@@ -19,6 +19,7 @@
 		0EE9475C280A28CF00560571 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE9475B280A28CF00560571 /* API.swift */; };
 		0EE94762280A297C00560571 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE94761280A297C00560571 /* Product.swift */; };
 		0EE94764280A413C00560571 /* ResponseSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EE94763280A413C00560571 /* ResponseSample.json */; };
+		16EAE619CDDD9D006F5026DB /* Pods_Price_Watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2193902EFD37166AE2458ED9 /* Pods_Price_Watch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,9 @@
 		0EE9475B280A28CF00560571 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0EE94761280A297C00560571 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0EE94763280A413C00560571 /* ResponseSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ResponseSample.json; sourceTree = "<group>"; };
+		2193902EFD37166AE2458ED9 /* Pods_Price_Watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Price_Watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25FF31B3DE900F3DAE6CEDB5 /* Pods-Price Watch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Price Watch.debug.xcconfig"; path = "Target Support Files/Pods-Price Watch/Pods-Price Watch.debug.xcconfig"; sourceTree = "<group>"; };
+		88F4B2B05BC3E731D49C5CF6 /* Pods-Price Watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Price Watch.release.xcconfig"; path = "Target Support Files/Pods-Price Watch/Pods-Price Watch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16EAE619CDDD9D006F5026DB /* Pods_Price_Watch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				0E2C720E280117FF007FC4C9 /* Price Watch */,
 				0E2C720D280117FF007FC4C9 /* Products */,
+				BB3FD262DE4B87E836598707 /* Pods */,
+				F8C7AA8F7F954C57E796476E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +124,24 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		BB3FD262DE4B87E836598707 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25FF31B3DE900F3DAE6CEDB5 /* Pods-Price Watch.debug.xcconfig */,
+				88F4B2B05BC3E731D49C5CF6 /* Pods-Price Watch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F8C7AA8F7F954C57E796476E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2193902EFD37166AE2458ED9 /* Pods_Price_Watch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E2C722028011801007FC4C9 /* Build configuration list for PBXNativeTarget "Price Watch" */;
 			buildPhases = (
+				7A0DABAAB9A7CF0F9D16E2EA /* [CP] Check Pods Manifest.lock */,
 				0E2C7208280117FF007FC4C9 /* Sources */,
 				0E2C7209280117FF007FC4C9 /* Frameworks */,
 				0E2C720A280117FF007FC4C9 /* Resources */,
+				D2A549A9DCBAD12F9937B7B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +210,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A0DABAAB9A7CF0F9D16E2EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Price Watch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A549A9DCBAD12F9937B7B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Price Watch/Pods-Price Watch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Price Watch/Pods-Price Watch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Price Watch/Pods-Price Watch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0E2C7208280117FF007FC4C9 /* Sources */ = {
@@ -338,6 +407,7 @@
 		};
 		0E2C722128011801007FC4C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25FF31B3DE900F3DAE6CEDB5 /* Pods-Price Watch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -366,6 +436,7 @@
 		};
 		0E2C722228011801007FC4C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88F4B2B05BC3E731D49C5CF6 /* Pods-Price Watch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
