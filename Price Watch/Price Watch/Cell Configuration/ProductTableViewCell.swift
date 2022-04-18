@@ -18,8 +18,8 @@ class ProductTableViewCell: UITableViewCell {
     var product : Product! {
         didSet {
             productNameLabel.text = product.name
-            priceLabel.text = "$ having issues parsing"
-            sourceLabel.text = "having issues parsing"
+            priceLabel.text = product.price
+            sourceLabel.text = product.source
         }
     }
 

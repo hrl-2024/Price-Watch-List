@@ -15,6 +15,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     // Outlets:
     @IBOutlet weak var productTableView: UITableView!
     
+    let mainQueue = DispatchQueue.main
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,9 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
             }
             self.products = product
             
-            self.productTableView.reloadData() // reloading the data
+            self.mainQueue.async {
+                self.productTableView.reloadData() // reloading the data
+            }
         }
     }
     
