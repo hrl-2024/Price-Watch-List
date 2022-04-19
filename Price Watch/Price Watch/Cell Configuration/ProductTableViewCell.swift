@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ProductTableViewCell: UITableViewCell {
     
@@ -20,6 +21,7 @@ class ProductTableViewCell: UITableViewCell {
             productNameLabel.text = product.name
             priceLabel.text = product.price
             sourceLabel.text = product.source
+            posterView.af.setImage(withURL: product.imageURL!)
         }
     }
 

@@ -20,6 +20,7 @@
 		0EE94762280A297C00560571 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE94761280A297C00560571 /* Product.swift */; };
 		0EE94764280A413C00560571 /* ResponseSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EE94763280A413C00560571 /* ResponseSample.json */; };
 		16EAE619CDDD9D006F5026DB /* Pods_Price_Watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2193902EFD37166AE2458ED9 /* Pods_Price_Watch.framework */; };
+		E1981405280E62FE00C85B83 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1981404280E62FE00C85B83 /* ResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2193902EFD37166AE2458ED9 /* Pods_Price_Watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Price_Watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FF31B3DE900F3DAE6CEDB5 /* Pods-Price Watch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Price Watch.debug.xcconfig"; path = "Target Support Files/Pods-Price Watch/Pods-Price Watch.debug.xcconfig"; sourceTree = "<group>"; };
 		88F4B2B05BC3E731D49C5CF6 /* Pods-Price Watch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Price Watch.release.xcconfig"; path = "Target Support Files/Pods-Price Watch/Pods-Price Watch.release.xcconfig"; sourceTree = "<group>"; };
+		E1981404280E62FE00C85B83 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				0E2C720F280117FF007FC4C9 /* AppDelegate.swift */,
 				0E2C7211280117FF007FC4C9 /* SceneDelegate.swift */,
 				0E2C7215280117FF007FC4C9 /* Main.storyboard */,
+				E1981404280E62FE00C85B83 /* ResultTableViewCell.swift */,
 				0EFBB2292801256600B1EE3E /* ViewController */,
 				0EE94760280A294800560571 /* Model */,
 				0EE9475E280A292B00560571 /* Network */,
@@ -130,7 +133,6 @@
 				25FF31B3DE900F3DAE6CEDB5 /* Pods-Price Watch.debug.xcconfig */,
 				88F4B2B05BC3E731D49C5CF6 /* Pods-Price Watch.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -265,6 +267,7 @@
 				0E67E7E128011A3000F25558 /* ItemPageViewController.swift in Sources */,
 				0EE9475C280A28CF00560571 /* API.swift in Sources */,
 				0E67E7DD2801198300F25558 /* MainViewController.swift in Sources */,
+				E1981405280E62FE00C85B83 /* ResultTableViewCell.swift in Sources */,
 				0EE94762280A297C00560571 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,11 +7,13 @@
 
 import UIKit
 
-class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     // data structure for the tableView
     var products = [Product]()
-
+    
+    let myRefreshControl = UIRefreshControl()
+    
     // Outlets:
     @IBOutlet weak var productTableView: UITableView!
     
@@ -26,12 +28,15 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         // Do any additional setup after loading the view.
         getAPIData(withType: "shoes")
         
+        myRefreshControl.addTarget(self, action: #selector(getAPIData(withType:)), for:.valueChanged)
+        productTableView.refreshControl = myRefreshControl
+        
         print(products)
         
     }
     
     // TODO: Get data from API helper and retrieve products
-    func getAPIData(withType: String) {
+    @objc func getAPIData(withType: String) {
         
         API.getProduct(ofType: withType) { (product) in
             guard let product = product else {
@@ -42,6 +47,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
             
             self.mainQueue.async {
                 self.productTableView.reloadData() // reloading the data
+                self.myRefreshControl.endRefreshing()
             }
         }
     }
