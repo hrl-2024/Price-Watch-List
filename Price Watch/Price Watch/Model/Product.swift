@@ -9,8 +9,8 @@ import Foundation
 
 class Product {
     var name : String
-    var price : String
-    var imageURL : URL!
+    var price : String?
+    var imageURL : URL?
     var source : String
     // var description : String
     
@@ -21,16 +21,22 @@ class Product {
         let sourceArray = dict["domains"] as! Array<String>
         source = sourceArray[0]
         
-        let priceArray = dict["prices"] as! Array<NSDictionary?>
-        let firstItemDict = priceArray[0] as! [String: Any]
-        let priceNum = firstItemDict["amountMin"] as! Double
-        price = String(priceNum)
+        let priceArray = dict["prices"] as? Array<NSDictionary?>
+        let firstItemDict = priceArray?[0] as? [String: Any]
+        if let firstDict = firstItemDict{
+            price = String(firstItemDict?["amountMin"] as! Double)
+        }else{
+            price = "error in getting price"
+        }
         
         // let priceDict = dict["prices"] as? [String: Any]
         // price = priceDict[0]["amountMin"] as! Int64
-         let imageArray = dict["primaryImageURLs"] as! Array<String?>
-        let imagePath = URL(string: imageArray[0]! )
-        imageURL = imagePath
+        let imageArray = dict["primaryImageURLs"] as? Array<String?>
+        if let photoArray = imageArray{
+            imageURL = URL(string: (imageArray?[0]!)!)
+        }else{
+            imageURL = URL(string: "https://static.thenounproject.com/png/2884221-200.png")
+        }
         
         // source = dict["domains"] as! String  // an array
         // description = dict["descriptions"] as! String
