@@ -14,6 +14,7 @@ class Product {
     var source : String
     // var description : String
     
+    
     init(dict: [String: Any]) {
         // TODO: assigning the variables
         name = dict["name"] as! String

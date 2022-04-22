@@ -104,6 +104,7 @@
                                             <outlet property="priceLabel" destination="USF-MQ-T9q" id="KRR-6y-VRK"/>
                                             <outlet property="productNameLabel" destination="2nN-LQ-zPo" id="DAb-SS-P6Q"/>
                                             <outlet property="sourceLabel" destination="X7x-Jr-4Yn" id="JZv-q6-uaP"/>
+                                            <segue destination="h3o-Us-yl1" kind="show" id="I7X-wP-faE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -144,6 +145,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cc-Hs-8H0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-860" y="378"/>
+        </scene>
+        <!--Product Details View Controller-->
+        <scene sceneID="gZ8-3a-1qI">
+            <objects>
+                <viewController id="h3o-Us-yl1" customClass="ProductDetailsViewController" customModule="Price_Watch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IHC-bm-F7d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1dY-6m-gz1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="flp-Gx-zgX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9g5-lQ-S8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="378"/>
         </scene>
     </scenes>
     <resources>

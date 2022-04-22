@@ -8,6 +8,7 @@
 import UIKit
 
 class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+
     
     // data structure for the tableView
     var products = [Product]()
@@ -71,6 +72,15 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         cell.product = product
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = productTableView.indexPath(for: cell)!
+        let product = products[indexPath.row]
+        
+        let detailsiewController = segue.destination as! ProductDetailsViewController
+        detailsiewController.product = product 
     }
     
 }

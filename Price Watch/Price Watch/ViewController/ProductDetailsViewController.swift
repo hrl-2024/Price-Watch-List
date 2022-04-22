@@ -1,21 +1,24 @@
 //
-//  ItemPageViewController.swift
+//  ProductDetailsViewController.swift
 //  Price Watch
 //
-//  Created by Henry Liu on 4/8/22.
+//  Created by William Lee on 2022/4/20.
 //
 
 import UIKit
 
-class ItemPageViewController: UIViewController {
+class ProductDetailsViewController: UIViewController {
+    
+    var product = [Product]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
+        print(product as Any)
     
-
+    
+    }
     /*
     // MARK: - Navigation
 
