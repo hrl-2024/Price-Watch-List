@@ -19,11 +19,26 @@ class MainViewController: UIViewController {
         searchBar.becomeFirstResponder()
     }
     
+    func showAlert(){
+        let alert = UIAlertController(title: "Missing Keyword", message: "Please enter keywords!", preferredStyle: .alert )
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { action  in
+            print("tapped dismiss")
+        }))
+        
+        present(alert, animated: true)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showResult" {
                 if let destVC = segue.destination as? UINavigationController,
                     let SearchResult = destVC.topViewController as? SearchResultViewController {
-                    SearchResult.searchText = searchBar.text!
+                    if searchBar.text != ""{
+                        SearchResult.searchText = searchBar.text!
+                    }else{
+                        showAlert()
+                    }
+                    
                 }
         }
     }

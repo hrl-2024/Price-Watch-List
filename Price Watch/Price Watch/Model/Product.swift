@@ -29,7 +29,6 @@ class Product {
         if let firstDict = firstItemDict{
             price = String(firstItemDict?["amountMin"] as! Double)
             currency = firstItemDict?["currency"] as! String
-            
         }else{
             price = "error"
             currency = "error"
@@ -44,8 +43,8 @@ class Product {
             imageURL = URL(string: "https://static.thenounproject.com/png/2884221-200.png")
         }
         
-        if let shippingPrice = dict["shipping"]{
-            shipping = (shippingPrice as! String)
+        if let shippingPrice = dict["shipping"] as? String{
+            shipping = (shippingPrice)
         }else{
             shipping = "error"
         }

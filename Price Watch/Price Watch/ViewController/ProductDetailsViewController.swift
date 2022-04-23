@@ -9,16 +9,18 @@ import UIKit
 
 class ProductDetailsViewController: UIViewController {
     
+    
+    
     var product: Product!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(product)
-    
-    
+
     }
+    
+    
     /*
     // MARK: - Navigation
 
