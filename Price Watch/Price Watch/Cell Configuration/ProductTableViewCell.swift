@@ -20,7 +20,7 @@ class ProductTableViewCell: UITableViewCell {
     var product : Product! {
         didSet {
             productNameLabel.text = product.name
-            priceLabel.text = product.price
+            priceLabel.text = "$" + product.price!
             sourceLabel.text = product.source
             posterView.af.setImage(withURL: product.imageURL!)
         }
