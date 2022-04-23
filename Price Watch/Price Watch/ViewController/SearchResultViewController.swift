@@ -29,11 +29,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         productTableView.delegate = self
 
         // Do any additional setup after loading the view.
-        print(searchText)
         getAPIData(withType: searchText)
-        
-        
-        print("i am products", products)
         
     }
     
@@ -76,14 +72,15 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let cell = sender as! UITableViewCell
-        let indexPath = productTableView.indexPath(for: cell)!
-        let product = products[indexPath.row]
-        
-        let detailsiewController = segue.destination as! ProductDetailsViewController
-        detailsiewController.product = product
-        print("selcted one successfully")
-        
-        //tableView.deselectRow(at: indexPath, animated: true)
+        if let indexPath = productTableView.indexPath(for: cell) {
+            let product = products[indexPath.row]
+            
+            // pass the product to the detailviewController
+            let detailViewController = segue.destination as! ProductDetailsViewController
+            detailViewController.product = product
+            
+            //tableView.deselectRow(at: indexPath, animated: true)
+        }
     }
     
 }

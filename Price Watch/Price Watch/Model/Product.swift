@@ -12,10 +12,9 @@ class Product {
     var price : String?
     var imageURL : URL?
     var source : String
-    var currency: String?
-    var shipping: String?
-    // var description : String
-    
+    var detailSourceURL : URL?
+    var description : String
+    var imageURLArray : Array<URL> = []
     
     init(dict: [String: Any]) {
         // TODO: assigning the variables
@@ -26,31 +25,40 @@ class Product {
         
         let priceArray = dict["prices"] as? Array<NSDictionary?>
         let firstItemDict = priceArray?[0] as? [String: Any]
-        if let firstDict = firstItemDict{
+        
+        if firstItemDict != nil {
             price = String(firstItemDict?["amountMin"] as! Double)
-            currency = firstItemDict?["currency"] as! String
             
-        }else{
+            // for parsing detailSourceURL:
+            let detailSourceURLArray = firstItemDict?["sourceURLs"] as! Array<String>
+            detailSourceURL = URL(string: detailSourceURLArray[0])
+        } else{
             price = "error"
-            currency = "error"
+            detailSourceURL = URL(string: "https://external-preview.redd.it/FK8dbGpQIaXWP_kKUx7uWaCJNJXMjqSVvzQjwhO4-G0.jpg?auto=webp&s=bb16847fe7da637256fedb59baec10c487c209b6")
         }
         
         // let priceDict = dict["prices"] as? [String: Any]
         // price = priceDict[0]["amountMin"] as! Int64
         let imageArray = dict["primaryImageURLs"] as? Array<String?>
-        if let photoArray = imageArray{
+        if imageArray != nil {
             imageURL = URL(string: (imageArray?[0]!)!)
         }else{
             imageURL = URL(string: "https://static.thenounproject.com/png/2884221-200.png")
         }
         
-        if let shippingPrice = dict["shipping"]{
-            shipping = (shippingPrice as! String)
-        }else{
-            shipping = "error"
-        }
+        let descriptionsInJSON = dict["descriptions"] as? Array<NSDictionary?>
+        let firstDescription = descriptionsInJSON?[0] as? [String : Any]
+        
+        description = firstDescription?["value"] as? String ?? "No description provided"
         
         // source = dict["domains"] as! String  // an array
-        // description = dict["descriptions"] as! String
+        
+        /*
+        let imageURLsInJSON = dict["imageURLs"] as? Array<String> ?? []
+        for string in imageURLsInJSON {
+            let imgURL = URL(string: string) ?? URL(string: "https://static.thenounproject.com/png/2884221-200.png")
+            imageURLArray.append(imgURL)
+        }
+         */
     }
 }

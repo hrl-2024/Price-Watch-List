@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ProductDetailsViewController: UIViewController {
+    
+    // Outlets:
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productDescription: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var product: Product!
 
@@ -15,18 +22,20 @@ class ProductDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(product)
-    
-    
+        productName.text = product.name
+        productName.sizeToFit()
+        
+        productPrice.text = "$" + (product.price ?? "no price")
+        
+        productDescription.text = product.description
+        productDescription.sizeToFit()
+        
+        imageView.af.setImage(withURL: product.imageURL!)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let websiteView = segue.destination as! OfficialWebsiteViewController
+        
+        websiteView.productURL = product.detailSourceURL
     }
-    */
-
 }
