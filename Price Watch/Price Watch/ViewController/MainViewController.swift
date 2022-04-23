@@ -35,6 +35,7 @@ class MainViewController: UIViewController {
     @IBAction func onSearch(_ sender: Any) {
         //performSegue(withIdentifier: "showSearchResult", sender: nil)
         performSegue(withIdentifier: "showResult", sender: self)
+        searchBar.text?.removeAll()
     }
     
     func showAlert(){
