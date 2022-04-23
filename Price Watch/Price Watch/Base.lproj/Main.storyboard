@@ -206,6 +206,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oya-qO-LrV">
+                                <rect key="frame" x="245" y="761" width="87" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Notify Me"/>
+                                <connections>
+                                    <action selector="NotifyButton:" destination="eCG-7j-hU2" eventType="touchUpInside" id="5EK-d4-tCE"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please select a time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88k-Gg-HHm">
+                                <rect key="frame" x="68" y="759" width="164" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Yy-1Y-4sa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -237,11 +252,12 @@
                         <outlet property="productDescription" destination="1cE-9Y-Lia" id="oYz-aN-oMC"/>
                         <outlet property="productName" destination="TbM-UQ-yWg" id="dPB-W3-vlO"/>
                         <outlet property="productPrice" destination="t5K-az-McE" id="K0J-E1-a0R"/>
+                        <outlet property="selectTimeTextField" destination="88k-Gg-HHm" id="oy8-8o-fMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvN-Yb-wHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="378"/>
+            <point key="canvasLocation" x="1867.6923076923076" y="377.48815165876778"/>
         </scene>
         <!--Official Website View Controller-->
         <scene sceneID="Tsc-9m-PPB">

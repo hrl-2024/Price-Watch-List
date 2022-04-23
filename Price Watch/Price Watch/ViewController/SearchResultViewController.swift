@@ -79,7 +79,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
             let detailViewController = segue.destination as! ProductDetailsViewController
             detailViewController.product = product
             
-            productTableView.deselectRow(at: indexPath, animated: true)
+            //tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     

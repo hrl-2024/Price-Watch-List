@@ -13,7 +13,7 @@ struct API {
 
         let headers = [
           "Accept": "application/json",
-          "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ2aWZ0ZTY0YTVkdG9zOTVweGMwODE5bmdqMXk4d29pcSIsImlzcyI6ImRhdGFmaW5pdGkuY28ifQ.RwGWtkl_u66Q3Mb5jWBPtAmujMzDnVDFWxe0xjMBRF3O5bk-PCC_h6YqHSGk4blSx2BF-FCbDoOOczJ9SQU4_a6dzKGg1wlDB-DQ3IUJiq-F9q4tJtqUHfIN7voAW6XFsQHR5ccLhUVV7yuz6hpN5mGJtwSvyFJfjGTV3vTv7hiKzcGSacxGRoajBTrBjZB1TWKkhk6nN3quizYp-qb3-IXw-gxWyHOKmHEIdAUajVjve6OUqLKCtbHSuSwn1hYKx11JUdL6MtcGM6yeRHZ3R5ULdufxxmKSTXLdc1la65egZkyFVjZYH1MlK3Z152ejqbCGiw-1R3C-Qv6SIafDsPtAMVa5mjiNM5Dcs_xdpoKJP1boRSRXTUU64_zL21HGlE5bUju3Xn8Gsw6qo2qvu7CjqC4e1PplJt6LjV7G2wHZgjgLaE-wlvqf21J5w8JkRAGYxw5Jaf6h3UPmuCsPGVu3tnN-S6ChhtiR93K25oJUOFABiAcHueJpq2d347SZIpQFa2yIY8VGSNSI_f_s3NZwwLFs2tVFH7Sq7z3A35t-POgEHCUCz-6U9938YwFe9xOWhdlXAzj_OGEe0Xhk96F5jq9se1FCFwpkZGCaXxZ_1YEk768V_QFHiFbhEvPonRGCbx-LdQtfUZnEt43-i-H6LAQw5iRNEitJcbptp3g",
+          "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ZmdqY2xtYno3YmdpNHlkN3A1NnZrbHp3eWZiNmE1ayIsImlzcyI6ImRhdGFmaW5pdGkuY28ifQ.AsCueyRDPb9EHhJH9gAJY63_dQ01VIerjfS9CwcnAZAK1iIRjTbF7UDgyMlqnKanr51loLllZxc8t4mUH_i56xH9S-24dUcub6Lg31SJz_MTdLMrsaE9WpjMrHE8Qy0P0gt4-FppDW_ojK6fNeITCzB7IbVKDOBoOhbTWHZdLxMC-0x6PlL1bWlnHejaen5eA4FylSs3H_HZ-hl1u5ZQvVz4f1l8dIwUzIxUdQcfnK8pm4qfNyHeEWVu5rcYyvGdNA1B9MWubL_RuezgHxaZcFDPFo2KLGMqvVjaBNyUN95suopfP9FKpJVm2vpC2JqXg9gk_D-cj52WnX3KiYTkk7hlb8LSm8QlOf506jMd5IpFqLZZiUkNPbBgWuj3pIIgnwrXD2vue5Ht1Jlm-eUJ_r-jZ7H5LUYW4B78rvsCCIHD2rV56cLPvYw4teBGwsvZQkZOSqS4Wi-DLCpryVEKDBEbbClUXetHPP1TxqUz70WhDyF9z8IImyrPAwy6vIOrh0vQwz_t_MnP4kkf0Rmn6Mp0jyl6KThq_Xl4iJqlgv8f-YaueUVk2qkD6CZIMf1gzP28uth1p4aCJakx4dSn6GBOQ6vMI4ZbGrMWh745EsdJOtCLMr4Wn2YEZizRRbHGhnGQXRPDGuFiI4e9gCdcEv-wSPK975Lj-72v8OEJ9nI",
           "Content-Type": "application/json"
         ]
         
@@ -23,7 +23,7 @@ struct API {
           "query": queryString,
           "format": "json",
           "download": false,
-          "num_records": 10
+          "num_records": 3
         ] as [String : Any]
 
         let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
