@@ -1,6 +1,3 @@
-Original App Design Project - README Template
-===
-
 # Price Watch List
 
 ## Table of Contents
@@ -30,10 +27,12 @@ An app that can compare prices from different online shopping website.
 
 - [x] Users can type in an item they want.
 - [x] After typing, use can see the searching result in a tableview
-    * update: API fully working now. But having issues parsing the data (info inside dictionary/array within dictioanries)
-* Users can see the prices for the item from multiple websites.
-* Users can see the customer reviews from multiple websites.
-* Users can add the item to the item watch list
+- [x] Users can see the prices for the item
+- [x] Users can see the desciption in the product detail page
+- [x] When typed in a nil for the search, pop up an error message preventing the API call
+- [ ] Users can see the prices across different websites
+- [ ] Users can see the customer reviews from multiple websites.
+- [ ] Users can add the item to the item watch list
 
 **Optional Nice-to-have Stories**
 
