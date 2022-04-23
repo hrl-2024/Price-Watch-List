@@ -12,6 +12,8 @@ class Product {
     var price : String?
     var imageURL : URL?
     var source : String
+    var currency: String?
+    var shipping: String?
     // var description : String
     
     
@@ -26,8 +28,11 @@ class Product {
         let firstItemDict = priceArray?[0] as? [String: Any]
         if let firstDict = firstItemDict{
             price = String(firstItemDict?["amountMin"] as! Double)
+            currency = firstItemDict?["currency"] as! String
+            
         }else{
-            price = "error in getting price"
+            price = "error"
+            currency = "error"
         }
         
         // let priceDict = dict["prices"] as? [String: Any]
@@ -37,6 +42,12 @@ class Product {
             imageURL = URL(string: (imageArray?[0]!)!)
         }else{
             imageURL = URL(string: "https://static.thenounproject.com/png/2884221-200.png")
+        }
+        
+        if let shippingPrice = dict["shipping"]{
+            shipping = (shippingPrice as! String)
+        }else{
+            shipping = "error"
         }
         
         // source = dict["domains"] as! String  // an array
