@@ -13,7 +13,7 @@ struct API {
 
         let headers = [
           "Accept": "application/json",
-          "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqa2N3ZTl4ODJnMG1ic3QwZno5Z3J2aHppeGVveWdlbSIsImlzcyI6ImRhdGFmaW5pdGkuY28ifQ.qtuzTRaGqyDGKL7L6E0u7ihgOHjOgIqqVHY8OHcMiew6XY5s_FrD2NzbuJgSTRyj5-htOVqW7dj230cOondgc9Xs0umFnoqXWKHhPHiQdPkwaOJ9VrFnKirvyLWN5FWIYKVcvVrhbwRFc2xjIRd4Pa9gYUqNpGIA9FSkW6a2HE2yM6W2RsgqY7Vk96KJFwpuRSq0-NtN-cq_y6hEHjXSZBZJboqfs93E5Txh8jedN8vhSILAftKsv_3uDbMokyrtZtkEUezDL32mfqs2VRkmdpltD2mtBvsgxA7uzUkE1ea2nzpqfaUbSR2PJ4hIHfI5H6qnrD0YMqs68sD_n4TmL9cHgDan96ekv4sCchwjb-Syc6B6tQhQpEZxOQJWn8Lx4zGCjE9lNzbDDBwbB1-npnOXPbqodtNCuVrtyD-DCBg2ShpONloX1zgzJXSG1S8a0Y-kP7lXVQSBFqmVGK518cJBqrqqMcZR_B2UuGAn1fZFFt9kD640ZzFkqsIcUf0sWrR9h8jZVjyAk6g3_U3qq3G20WYgQceNDmMgtR_YBCJLMrrEZjlGrXn-eN7D_Wu9hrgLda2uHk3ie3PIyilgGuxypFf3TTqYLFVfZgvgGcDNdgAaieve23Lytxnbkf2V7qcA31bJCg23hyZqKaiQpSmTpmUrvG6EQDeWDph7tMo",
+          "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ2aWZ0ZTY0YTVkdG9zOTVweGMwODE5bmdqMXk4d29pcSIsImlzcyI6ImRhdGFmaW5pdGkuY28ifQ.RwGWtkl_u66Q3Mb5jWBPtAmujMzDnVDFWxe0xjMBRF3O5bk-PCC_h6YqHSGk4blSx2BF-FCbDoOOczJ9SQU4_a6dzKGg1wlDB-DQ3IUJiq-F9q4tJtqUHfIN7voAW6XFsQHR5ccLhUVV7yuz6hpN5mGJtwSvyFJfjGTV3vTv7hiKzcGSacxGRoajBTrBjZB1TWKkhk6nN3quizYp-qb3-IXw-gxWyHOKmHEIdAUajVjve6OUqLKCtbHSuSwn1hYKx11JUdL6MtcGM6yeRHZ3R5ULdufxxmKSTXLdc1la65egZkyFVjZYH1MlK3Z152ejqbCGiw-1R3C-Qv6SIafDsPtAMVa5mjiNM5Dcs_xdpoKJP1boRSRXTUU64_zL21HGlE5bUju3Xn8Gsw6qo2qvu7CjqC4e1PplJt6LjV7G2wHZgjgLaE-wlvqf21J5w8JkRAGYxw5Jaf6h3UPmuCsPGVu3tnN-S6ChhtiR93K25oJUOFABiAcHueJpq2d347SZIpQFa2yIY8VGSNSI_f_s3NZwwLFs2tVFH7Sq7z3A35t-POgEHCUCz-6U9938YwFe9xOWhdlXAzj_OGEe0Xhk96F5jq9se1FCFwpkZGCaXxZ_1YEk768V_QFHiFbhEvPonRGCbx-LdQtfUZnEt43-i-H6LAQw5iRNEitJcbptp3g",
           "Content-Type": "application/json"
         ]
         
@@ -23,7 +23,7 @@ struct API {
           "query": queryString,
           "format": "json",
           "download": false,
-          "num_records": 8
+          "num_records": 3
         ] as [String : Any]
 
         let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
@@ -42,7 +42,7 @@ struct API {
             } else if let data = data {
                 // Get the array of product
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                print(dataDictionary)
+                print("I am data dictionary", dataDictionary)
                 
                 // Store the movies in a property to use elsewhere
                 let productDict = dataDictionary["records"] as! [[String : Any]]

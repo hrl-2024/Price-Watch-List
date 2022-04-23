@@ -15,6 +15,7 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var posterView: UIImageView!
     
+    
     // the current product:
     var product : Product! {
         didSet {

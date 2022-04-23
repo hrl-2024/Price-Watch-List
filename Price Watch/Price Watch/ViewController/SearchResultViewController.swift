@@ -13,12 +13,14 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     // data structure for the tableView
     var products = [Product]()
     
-    let myRefreshControl = UIRefreshControl()
+    var searchText: String!
+    
     
     // Outlets:
     @IBOutlet weak var productTableView: UITableView!
     
     let mainQueue = DispatchQueue.main
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +29,11 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         productTableView.delegate = self
 
         // Do any additional setup after loading the view.
-        getAPIData(withType: "shoes")
+        print(searchText)
+        getAPIData(withType: searchText)
         
-        myRefreshControl.addTarget(self, action: #selector(getAPIData(withType:)), for:.valueChanged)
-        productTableView.refreshControl = myRefreshControl
         
-        print(products)
+        print("i am products", products)
         
     }
     
@@ -48,7 +49,6 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
             
             self.mainQueue.async {
                 self.productTableView.reloadData() // reloading the data
-                self.myRefreshControl.endRefreshing()
             }
         }
     }
@@ -80,7 +80,10 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         let product = products[indexPath.row]
         
         let detailsiewController = segue.destination as! ProductDetailsViewController
-        detailsiewController.product = product 
+        detailsiewController.product = product
+        print("selcted one successfully")
+        
+        //tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

@@ -19,7 +19,17 @@ class MainViewController: UIViewController {
         searchBar.becomeFirstResponder()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResult" {
+                if let destVC = segue.destination as? UINavigationController,
+                    let SearchResult = destVC.topViewController as? SearchResultViewController {
+                    SearchResult.searchText = searchBar.text!
+                }
+        }
+    }
+    
     @IBAction func onSearch(_ sender: Any) {
         //performSegue(withIdentifier: "showSearchResult", sender: nil)
+        performSegue(withIdentifier: "showResult", sender: self)
     }
 }
