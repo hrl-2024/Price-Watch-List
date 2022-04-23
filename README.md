@@ -129,3 +129,5 @@ Here's a walkthrough of implemented user stories:
 <img src='http://i.imgur.com/zHEnudt.gif' title='can type search' width='500' alt='can type search' /> <br>
 
 <img src='http://i.imgur.com/R6tFuGV.png' title='show results' width='500' alt='shows results' /> <br>
+
+<img src='http://g.recordit.co/k9Qs7zIiV6.gif' title='Full Demo' width='500' alt='Full Demo' /> <br>
