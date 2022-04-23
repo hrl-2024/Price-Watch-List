@@ -29,16 +29,11 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         productTableView.delegate = self
 
         // Do any additional setup after loading the view.
-        print(searchText)
+        print(searchText!)
         getAPIData(withType: searchText)
         
         
-        print("i am products", products)
-        
-    }
-    
-    func loadMoreProducts(){
-        //let numberOfProducts = API.parameter.num_records
+        print("I am products", products)
         
     }
     
