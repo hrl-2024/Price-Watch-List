@@ -26,9 +26,9 @@ class Product {
         
         let priceArray = dict["prices"] as? Array<NSDictionary?>
         let firstItemDict = priceArray?[0] as? [String: Any]
-        if let firstDict = firstItemDict{
+        if firstItemDict != nil{
             price = String(firstItemDict?["amountMin"] as! Double)
-            currency = firstItemDict?["currency"] as! String
+            currency = (firstItemDict?["currency"] as! String)
         }else{
             price = "error"
             currency = "error"
@@ -37,8 +37,11 @@ class Product {
         // let priceDict = dict["prices"] as? [String: Any]
         // price = priceDict[0]["amountMin"] as! Int64
         let imageArray = dict["primaryImageURLs"] as? Array<String?>
-        if let photoArray = imageArray{
+        let alternateArray = dict["imageURLs"] as? Array<String?>
+        if imageArray != nil{
             imageURL = URL(string: (imageArray?[0]!)!)
+        }else if alternateArray != nil{
+            imageURL = URL(string: (alternateArray?[0]!)!)
         }else{
             imageURL = URL(string: "https://static.thenounproject.com/png/2884221-200.png")
         }

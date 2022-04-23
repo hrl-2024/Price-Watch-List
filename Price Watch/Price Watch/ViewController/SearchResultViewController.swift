@@ -37,6 +37,11 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         
     }
     
+    func loadMoreProducts(){
+        //let numberOfProducts = API.parameter.num_records
+        
+    }
+    
     // TODO: Get data from API helper and retrieve products
     @objc func getAPIData(withType: String) {
         

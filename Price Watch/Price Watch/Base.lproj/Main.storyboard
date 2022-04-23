@@ -209,10 +209,6 @@
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="yK3-fR-EkM">
                         <barButtonItem key="backBarButtonItem" title="Back" id="4f4-9O-RaF"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="productName" destination="TbM-UQ-yWg" id="Ip8-fj-wHt"/>
-                        <outlet property="productNameConstraint" destination="TbM-UQ-yWg" id="0Fk-NC-IJa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvN-Yb-wHJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
